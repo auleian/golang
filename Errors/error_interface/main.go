@@ -5,11 +5,17 @@ import (
 )
 
 func sendSMSToCouple(msgToCustomer, msgToSpouse string) (int, error) {
+	cost, err := sendSMS(msgToCustomer)
+	sCost, sErr := sendSMS(msgToSpouse)
 
-	err := sendSMS()
 	if err != nil {
-		return 0
+		return 0, err
+	}else if sErr != nil {
+		return 0, sErr
+	}else{
+		return cost + sCost, nil
 	}
+
 }
 
 // don't edit below this line
