@@ -1,10 +1,12 @@
 package main
 
 func maxMessages(thresh int) int {
-	max := 0
-	for i := 0; ; i++{
-		max += 100 + i*thresh
-		
+totalCost := 0
+	for i := 0; ; i++ {
+		messageCost := 100 + i
+		if totalCost + messageCost > thresh {
+			return i
+		}
+		totalCost += messageCost
 	}
-
 }
