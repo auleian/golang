@@ -1,7 +1,6 @@
 package main
 
 func getMessageCosts(messages []string) []float64 {
-	// ?
 	cost := make([]float64, len(messages))
 
 	for i:= range messages{
