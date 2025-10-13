@@ -6,5 +6,11 @@ type cost struct {
 }
 
 func getDayCosts(costs []cost, day int) []float64 {
-	// ?
+	result := []float64{}
+	for _, c := range costs {
+		if c.day == day {
+			result = append(result, c.value)
+		}
+	}
+	return result
 }
