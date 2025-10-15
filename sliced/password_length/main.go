@@ -8,11 +8,11 @@ func isValidPassword(password string) bool {
 	cap := false
 	num := false
 
-	for char := range []byte(password) {
-		if char >= 'A' && char <= 'B' {
+	for _, char := range []byte(password) {
+		if char >= 'A' && char <= 'Z' {
 			cap = true
 		}
-		if char >= 0 && char <= 9 {
+		if char >= '0' && char <= '9' {
 			num = true
 		}
 		if cap && num {
@@ -20,6 +20,6 @@ func isValidPassword(password string) bool {
 		}
 	}
 
-	return true
+	return cap && num
 	
 }
