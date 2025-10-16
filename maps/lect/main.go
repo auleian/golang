@@ -5,7 +5,7 @@ import "errors"
 func getUserMap(names []string, phoneNumbers []int) (map[string]user, error) {
 	contacts := make(map[string]user)
 	
-	if len(names) < len(phoneNumbers) || len(names) > len(phoneNumbers) {
+	if len(names) != len(phoneNumbers) {
 		err := errors.New("invalid sizes")
 		return nil, err
 	}
