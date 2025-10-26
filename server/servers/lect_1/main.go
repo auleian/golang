@@ -7,7 +7,7 @@ import (
 
 func handleRequests(reqs <-chan request) {
 	for req := range reqs {
-		handleRequest(req)
+		go handleRequest(req)
 	}
 }
 
