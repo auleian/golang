@@ -8,7 +8,7 @@ func checkoutTotal(subtotal int, hasCoupon bool, couponType string, isVIP bool, 
 		}else if couponType == "FLAT500" {
 			subtotal -= 500
 		}else{
-			continue
+			
 		}
 	}
 	return 0
