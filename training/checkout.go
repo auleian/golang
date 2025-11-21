@@ -4,7 +4,7 @@ func checkoutTotal(subtotal int, hasCoupon bool, couponType string, isVIP bool, 
 	// your code here
 	if hasCoupon == true {
 		if couponType == "PERCENT10" {
-			subtotal *= 0.9
+			subtotal *= 90%
 		}else if couponType == "FLAT500" {
 			subtotal -= 500
 		}else{
