@@ -2,7 +2,7 @@ package main
 
 import "encoding/json"
 
-// Starter uses unexported fields and different names; fix this so json works.
+
 type product struct {
 	Name    string `json:"name"`
 	Price   int    `json:"price_cents"`
