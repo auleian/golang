@@ -1,7 +1,7 @@
 package main
 
 import "encoding/json"
-//comment
+
 type product struct {
 	Name    string `json:"name"`
 	Price   int    `json:"price_cents"`
