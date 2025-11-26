@@ -10,6 +10,7 @@ type product struct {
 
 func cleanProductJSON(input string) string {
 	var p product
+	//statement
 	_ = json.Unmarshal([]byte(input), &p)
 	m, _ := json.Marshal(p)
 	return string(m)
